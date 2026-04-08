@@ -29,24 +29,6 @@
 }
 
 @media (max-width: 768px) {
-  .texto {
-    top: 0;
-    left: 0;
-    transform: scaleX(1.5);
-
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 18vw; /* 🔥 ocupa toda la pantalla */
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
   @keyframes deformRight {
     25% { transform: scaleX(1.1); }
   }
