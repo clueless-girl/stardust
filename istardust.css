@@ -12,50 +12,49 @@
 }
 
 @media (max-width: 768px) {
+  /* apilar imágenes verticalmente usando flex */
+  .scene {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
   .left, .right {
+    position: relative; /* ya no absolute */
     width: 100%;
     height: 50%;
+    animation-duration: 2s; /* más rápido para móvil */
   }
 
-  .left {
+  /* TEXTO GIGANTE MÓVIL */
+  .texto {
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18vw;
+    text-align: center;
+    transform: scaleX(1.3);
+    transform-origin: center;
   }
 
-  .right {
-    bottom: 0;
-    top: auto;
-  }
-}
-
-@media (max-width: 768px) {
+  /* ANIMACIONES MÁS VISIBLES */
   @keyframes deformRight {
-    25% { transform: scaleX(1.1); }
+    0%   { transform: scaleX(1); }
+    25%  { transform: scaleX(1.4) skewX(8deg); }
+    50%  { transform: scaleX(0.8) skewX(-5deg); }
+    100% { transform: scaleX(1); }
   }
 
   @keyframes deformLeft {
-    50% { transform: scaleX(1.1); }
-  }
-}
-
-img {
-  will-change: transform;
-}
-
-@media (max-width: 768px) {
-  .texto {
-    top: 0;
-    left: 0;
-    transform: scaleX(1.5);
-
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 18vw;
-    text-align: center;
+    0%   { transform: scaleX(1); }
+    50%  { transform: scaleX(1.4) skewX(-8deg); }
+    75%  { transform: scaleX(0.8) skewX(5deg); }
+    100% { transform: scaleX(1); }
   }
 }
