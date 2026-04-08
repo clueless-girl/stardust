@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardust</title>
+    <link rel="stylesheet" href="istardust.css">
+    <style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* IZQUIERDA */
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+
+  animation: deformLeft 8s infinite ease-in-out;
+  animation-delay: 2s; /* empieza después */
+}
+
+/* DERECHA */
+.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+
+
+  animation: deformRight 8s infinite ease-in-out;
+}
+
+/* ANIMACIÓN DERECHA (primero) */
+@keyframes deformRight {
+  0%   { transform: scaleX(1); }
+  25%  { transform: scaleX(1.2); }
+  50%  { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+
+/* ANIMACIÓN IZQUIERDA (después) */
+@keyframes deformLeft {
+  0%   { transform: scaleX(1); }
+  25%  { transform: scaleX(1); }
+  50%  { transform: scaleX(1.2); }
+  75%  { transform: scaleX(1); }
+  100% { transform: scaleX(1); }
+}
+
+
+</style>
+</head>
+
+<body>
+    <img src="stardust_texto.png" class="texto">
+    <img src="shy guy con filtro 2.jpg" class="left">
+    <img src="guys 2.png" class="right">
+    
+</body>
+</html>
