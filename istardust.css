@@ -8,7 +8,7 @@
   font-size: 6rem;
   font-weight: bold;
   text-align: center;
-  z-index: 10; /* asegura que esté encima */
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -38,3 +38,24 @@
   }
 }
 
+img {
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .texto {
+    top: 0;
+    left: 0;
+    transform: scaleX(1.5);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18vw;
+    text-align: center;
+  }
+}
