@@ -1,0 +1,12 @@
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-45);
+  color: negro;
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10; /* asegura que esté encima */
+}
