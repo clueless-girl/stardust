@@ -62,7 +62,7 @@
 /* IZQUIERDA */
 .left {
   animation: deformLeft 6s infinite ease-in-out;
-  animation-delay: 1s; /* empieza después */
+  animation-delay: 1.5s; /* empieza después */
 }
 
 /* DERECHA */
