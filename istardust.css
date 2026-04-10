@@ -26,6 +26,12 @@
     animation-duration: 2s;
   }
 
+  @media (max-width: 768px) {
+  body {
+    background: red !important;
+  }
+}
+
   
   .texto {
     position: absolute;
